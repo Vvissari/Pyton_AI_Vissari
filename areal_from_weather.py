@@ -17,8 +17,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.model_selection import KFold
 
-REFERENCE_RASTER_PATH = "./wether/wc2.1_10m_bio_1.tif"
-PATH_TO_WORLDCLIM = "./wether" 
+REFERENCE_RASTER_PATH = "./weather/wc2.1_10m_bio_1.tif"
+PATH_TO_WORLDCLIM = "./weather" 
 EUROPE_BBOX = (-25.0, 34.0, 45.0, 72.0)
 
 
@@ -441,3 +441,4 @@ if __name__ == "__main__":
         generate_prediction_map(data[0], PATH_TO_WORLDCLIM)
     elif(i==2):
         validation(data[1], data[2], data[3])
+
