@@ -248,8 +248,6 @@ def weather_data():
     final_df = pd.DataFrame(gdf.drop(columns=['geometry'] ))
     bio_cols = [f"BIO{i}" for i in range(1, 20)]
     final_df = final_df.dropna(subset=bio_cols)
-    final_df.to_csv("species_with_bioclim.csv", index=False)
-    print(f"\nФайл сохранен: species_with_bioclim.csv")
     return final_df
 
 
@@ -441,4 +439,5 @@ if __name__ == "__main__":
         generate_prediction_map(data[0], PATH_TO_WORLDCLIM)
     elif(i==2):
         validation(data[1], data[2], data[3])
+
 
